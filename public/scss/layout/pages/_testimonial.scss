@@ -1,0 +1,81 @@
+@use '../../utils/' as * ;
+
+/*============= TESTIMONIAL CSS AREA ===============*/
+.testimonial-section-area {
+    position: relative;
+    z-index: 1;
+    .testimonial-header {
+        .head {
+            padding-left: 180px;
+            @media #{$xs} {
+                padding-left: 0;
+            }
+            @media #{$md} {
+                padding-left: 0;
+            }
+        }
+    }
+    .testimonial-boxarea {
+        position: relative;
+        z-index: 1;
+        background: var(--ztc-bg-bg2);
+        border: 1px solid var(--ztc-border-border-2);
+        border-radius: 8px;
+        padding: 24px;
+        transition: all .4s;
+        margin-bottom: 30px;
+        &:hover {
+            border: 1px solid var(--ztc-bg-btn-bg1);
+            transition: all .4s;
+            transform: translateY(-5px);
+        }
+        .list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            svg {
+                color: var(--ztc-text-text-1);
+            }
+            ul {
+                li {
+                    display: inline-block;
+                    color: #FFC700;
+                }
+            }
+        }
+        p {
+            color: var(--ztc-text-text-1);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s16);
+            font-style: normal;
+            font-weight: var(--ztc-weight-medium);
+            line-height: 26px; 
+            opacity: 0.8;    
+        }
+        .mans-area {
+            display: flex;
+            align-items: center;
+            .man {
+                img {
+                    height: 50px;
+                    width: 50px;
+                    text-align: center;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+            .content {
+                padding-left: 16px;
+                a {
+                    color: var(--ztc-text-text-1);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s20);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 20px; 
+                }     
+            }
+        }
+    }
+}
+/*============= TESTIMONIAL CSS AREA ENDS ===============*/

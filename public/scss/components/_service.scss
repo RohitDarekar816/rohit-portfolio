@@ -1,0 +1,43 @@
+@use '../utils' as *;
+
+/*============= SERVICE CSS AREA ===============*/
+.service-section-area {
+    position: relative;
+    z-index: 1;
+    .service-main-boxes {
+        position: relative;
+        z-index: 1;
+        background: var(--ztc-bg-bg2);
+        border: 1px solid var(--ztc-border-border-2);
+        border-radius: 8px;
+        padding: 32px;
+        transition: all .4s;
+        &:hover {
+            border: 1px solid var(--ztc-bg-btn-bg1);
+            transition: all .4s;
+            transform: translateY(-5px);
+        }
+        h4 {
+            color: var(--ztc-text-text-1);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s32);
+            font-style: normal;
+            font-weight: var(--ztc-weight-semibold);
+            line-height: 32px; /* 100% */
+            @media #{$xs} {
+                font-size: var(--ztc-font-size-font-s24);
+            }        
+        }
+        p {
+            color: var(--ztc-text-text-1);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s16);
+            font-style: normal;
+            font-weight: var(--ztc-weight-medium);
+            line-height: 26px; /* 100% */   
+            opacity: 80%; 
+            padding-left: 0;    
+        }
+    }
+}
+/*============= SERVICE CSS AREA ENDS===============*/

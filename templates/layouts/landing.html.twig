@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" {% block html_attribute %} {% endblock %}>
+  
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ovro - Personal Portfolio PHP Template</title>
+
+    <!--=====FAB ICON=======-->
+    <link rel="shortcut icon" href="/img/logo/fav-logo1.png" type="image/x-icon">
+
+    <!--===== CSS LINK =======-->
+    <link rel="stylesheet" href="/css/plugins/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/plugins/aos.css">
+    <link rel="stylesheet" href="/css/plugins/fontawesome.css">
+    <link rel="stylesheet" href="/css/plugins/magnific-popup.css">
+    <link rel="stylesheet" href="/css/plugins/owlcarousel.min.css">
+    <link rel="stylesheet" href="/css/plugins/sidebar.css">
+    <link rel="stylesheet" href="/css/plugins/slick-slider.css">
+    <link rel="stylesheet" href="/css/plugins/nice-select.css">
+    <link rel="stylesheet" href="/css/main.css">
+
+    <!--=====  JS SCRIPT LINK =======-->
+    <script src="/js/plugins/jquery-3-7-1.min.js"></script>
+
+    {% block css %}{% endblock %}
+
+</head>
+
+<body {% block body_attribute %} {% endblock %}>
+
+    <!--===== PRELOADER STARTS =======-->
+    <div id="preloader">
+      <div id="loader"></div>
+    </div>
+    <!--===== PRELOADER ENDS =======-->
+
+    <div class="procus-cursor" style="transform: translate3d(calc(-50% + 1919px), calc(-50% + 787px), 0px);"></div>
+    <div class="procus-cursor2" style="left: 551px; top: 918px;"></div>
+
+    {{ include('partials/progress.html.twig') }}
+    {{ include('partials/sidebar.html.twig') }}
+    {{ include('partials/navbar.html.twig') }}
+
+        
+    {% block content %}{% endblock %}
+
+    {{ include('partials/popup.html.twig') }}
+
+    {% block scripts %}{% endblock %}
+
+  <!--===== JS SCRIPT LINK =======-->
+  <script src="/js/plugins/bootstrap.min.js"></script>
+  <script src="/js/plugins/fontawesome.js"></script>
+  <script src="/js/plugins/aos.js"></script>
+  <script src="/js/plugins/counter.js"></script>
+  <script src="/js/plugins/sidebar.js"></script>
+  <script src="/js/plugins/magnific-popup.js"></script>
+  <script src="/js/plugins/owlcarousel.min.js"></script>
+  <script src="/js/plugins/nice-select.js"></script>
+  <script src="/js/plugins/waypoints.js"></script>
+  <script src="/js/plugins/slick-slider.js"></script>
+  <script src="/js/plugins/gsap.min.js"></script>
+  <script src="/js/plugins/ScrollTrigger.min.js"></script>
+  <script src="/js/plugins/Splitetext.js"></script>
+  <script src="/js/plugins/SmoothScroll.js"></script>
+  <script src="/js/plugins/parallax.js"></script>
+  <script src="/js/main.js"></script>
+
+</body>
+
+</html>

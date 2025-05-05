@@ -1,0 +1,227 @@
+@use '../utils/' as *;
+
+/*============= COMMON CSS AREA ===============*/
+// HEADING AREA //
+.heading1 {
+    h5 {
+        color: var(--ztc-text-text-1);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s24);
+        font-style: normal;
+        font-weight: var(--ztc-weight-medium);
+        line-height: 24px;
+        letter-spacing: -0.48px;    
+        img {
+            margin: 0 6px 0 0;
+        }  
+        @media #{$xs} {
+            font-size: var(--ztc-font-size-font-s16);
+            line-height: 16px;
+        }  
+    }
+    h1 {
+        color: var(--ztc-text-text-1);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s80);
+        font-style: normal;
+        font-weight: var(--ztc-weight-semibold);
+        line-height: 80px;  
+        @media #{$md} {
+            font-size: var(--ztc-font-size-font-s60);
+            line-height: 60px;
+        } 
+        @media #{$xs} {
+            font-size: var(--ztc-font-size-font-s32);
+            line-height: 32px;
+        } 
+        span {
+            color: var(--ztc-bg-btn-bg1);
+            font-family: var(--ztc-family-font2);
+            font-size: var(--ztc-font-size-font-s80);
+            font-style: italic;
+            font-weight: var(--ztc-weight-semibold);
+            line-height: 80px;
+            text-decoration-line: underline;
+            @media #{$md} {
+                font-size: var(--ztc-font-size-font-s60);
+                line-height: 60px;
+            }
+            @media #{$xs} {
+                font-size: var(--ztc-font-size-font-s32);
+                line-height: 32px;
+            } 
+        } 
+        &.head {
+            padding-left: 60px;
+            @media #{$xs} {
+                padding-left: 0;
+            }
+            @media #{$md} {
+                padding-left: 0;
+            }
+        }
+    }
+
+    h2 {
+        color: var(--ztc-text-text-1);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s80);
+        font-style: normal;
+        font-weight: var(--ztc-weight-semibold);
+        line-height: 80px;  
+        @media #{$md} {
+            font-size: var(--ztc-font-size-font-s60);
+            line-height: 60px;
+        } 
+        @media #{$xs} {
+            font-size: var(--ztc-font-size-font-s32);
+            line-height: 32px;
+        } 
+        span {
+            color: var(--ztc-bg-btn-bg1);
+            font-family: var(--ztc-family-font2);
+            font-size: var(--ztc-font-size-font-s80);
+            font-style: italic;
+            font-weight: var(--ztc-weight-semibold);
+            line-height: 80px;
+            text-decoration-line: underline;
+            @media #{$md} {
+                font-size: var(--ztc-font-size-font-s60);
+                line-height: 60px;
+            }
+            @media #{$xs} {
+                font-size: var(--ztc-font-size-font-s32);
+                line-height: 32px;
+            } 
+        } 
+        &.head {
+            padding-left: 60px;
+            @media #{$xs} {
+                padding-left: 0;
+            }
+            @media #{$md} {
+                padding-left: 0;
+            }
+        }
+    }
+    p {
+        color: var(--ztc-text-text-1);
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s16);
+        font-style: normal;
+        font-weight: var(--ztc-weight-medium);
+        line-height: 26px;
+        opacity: 80%; 
+        padding-left: 270px;
+        @media #{$xs} {
+            padding-left: 0;
+        }       
+    }
+}
+// BTN AREA //
+.vl-btn1 {
+    border-radius: 52px;
+    background: var(--ztc-bg-btn-bg1);
+    color: var(--ztc-text-btn-text1);
+    font-family: var(--ztc-family-font1);
+    font-size: var(--ztc-font-size-font-s20);
+    font-style: normal;
+    font-weight: var(--ztc-weight-semibold);
+    line-height: 20px; 
+    padding: 16px 20px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid var(--ztc-bg-btn-bg1);
+    transition: all .4s;
+    text-transform: uppercase;
+    &:hover {
+        color: var(--ztc-text-text-1);
+        border: 1px solid var(--ztc-text-text-1);
+        background: transparent;
+        img {
+            filter: brightness(0) invert(1);
+            transition: all .4s;
+        }
+    }
+    
+    img {
+        margin: -5px 0 0 0;
+        transition: all .4s;
+    }
+}
+/*============= COMMON CSS AREA ENDS===============*/
+
+.image-anime {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .image-anime:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 0%;
+    left: 50%;
+    top: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 1;
+  }
+  
+  .image-anime:hover:after {
+    height: 250%;
+    transition: all 600ms linear;
+    background-color: transparent;
+  }
+  
+  .reveal {
+    position: relative;
+    display: -ms-inline-flexbox;
+    visibility: hidden;
+    overflow: hidden;
+  }
+  
+  .reveal img {
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    -o-object-fit: cover;
+    object-fit: cover;
+    transform-origin: left;
+  }
+
+  .pagination-area {
+    ul {
+        li {
+            a {
+                color: var(--ztc-text-text-1);
+                text-align: center;
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s20);
+                font-style: normal;
+                font-weight: var(--ztc-weight-bold);
+                display: inline-block;
+                transition: all .4s;
+                background: var(--ztc-bg-bg2);
+                border: 1px solid var( --ztc-border-border-2);
+                height: 50px;
+                width: 50px;
+                text-align: center;
+                line-height: 40px;
+                border-radius: 4px;
+                margin: 0 14px 0 0;
+                box-shadow: none;
+                border-color: var(--ztc-border-border-2) !important;
+                &.active {
+                    background: var(--ztc-bg-btn-bg1);
+                    color: var(--ztc-text-text-2);
+                }
+                &:hover {
+                    background: var(--ztc-bg-btn-bg1);
+                    color: var(--ztc-text-text-2);
+                    border: 1px solid var(--ztc-border-border-2);
+                }
+            }
+        }
+    }
+  } 

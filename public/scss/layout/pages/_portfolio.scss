@@ -1,0 +1,109 @@
+@use '../../utils/' as * ;
+
+/*============= PORTFOLIO CSS AREA ===============*/
+.portfolio-section-area {
+    position: relative;
+    z-index: 1;
+    .portfolio-header {
+        .head {
+            padding-left: 310px;
+            @media #{$xs} {
+                padding-left: 0;
+            }
+            @media #{$md} {
+                padding-left: 0;
+            }
+        }
+    }
+
+    .portfolio-boxarea {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 30px;
+        pointer-events: inherit;
+        &:hover {
+            .img1 {
+                a {
+                    img {
+                        transform: scale(1.1);
+                        transition: all .4s;
+                    }
+                }
+            }
+        }
+        .img1 {
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            border-radius: 8px;
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all .4s;
+                }
+            }
+        }
+        a {
+            color: var(--ztc-text-text-1);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s32);
+            font-style: normal;
+            font-weight: var(--ztc-weight-semibold);
+            line-height: 40px; /* 100% */ 
+            display: inline-block;
+            transition: all .4s;
+            &:hover {
+                color: var(--ztc-bg-btn-bg1);
+                transition: all .4s;
+            }     
+        }
+    }
+    .portfolio-boxarea2 {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 30px;
+        &:hover {
+            .img1 {
+                a {
+                    img {
+                        transform: scale(1.1);
+                        transition: all .4s;
+                    }
+                }
+            }
+        }
+        .img1 {
+            overflow: hidden;
+            position: relative;
+            z-index: 1;
+            border-radius: 8px;
+            a {
+                display: block;
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transition: all .4s;
+                }
+            }
+        }
+        a {
+            color: var(--ztc-text-text-1);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s24);
+            font-style: normal;
+            font-weight: var(--ztc-weight-semibold);
+            line-height: 32px; /* 100% */ 
+            display: inline-block;
+            transition: all .4s;
+            &:hover {
+                color: var(--ztc-bg-btn-bg1);
+                transition: all .4s;
+            }     
+        }
+    }
+}
+/*============= PORTFOLIO CSS AREA ===============*/

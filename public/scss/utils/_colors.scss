@@ -1,0 +1,28 @@
+$colors: (
+    'text': (
+        'text-1': #fff,
+        'text-2': #061D1E,
+        'btn-text1':#0E161F,
+        'cnone-text':#fff,
+    ),
+    'bg': (
+        'bg-1':#061D1E,
+        'btn-bg1':#FFAE00,
+        'btn-bg2':#fab41d,
+        'side-bg1':#061D1E,
+        'bg2':rgba(255, 255, 255, 0.10),
+        'sticky-bg':#061D1E,
+        'bg3':#1F3434,
+    ),
+
+    'dark-bg': (
+        'bg-1':#fff,
+        'bg-2':rgba(255, 255, 255, 0.10),
+    ),
+    'border': (
+        'border-1': rgba(255, 255, 255, 0.20),
+        'border-2': rgba(255, 255, 255, 0.10),
+        'border-3': #fff,
+    )
+);
+

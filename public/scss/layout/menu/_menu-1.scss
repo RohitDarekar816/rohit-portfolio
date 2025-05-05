@@ -1,0 +1,64 @@
+@use '../../utils/' as * ;
+
+/*============= HEADER CSS AREA ENDS ===============*/
+
+// HOMEPAGE1 HEADER STARTS //
+.body1 {
+background: var(--ztc-bg-bg-1);
+@media #{$xs} {
+    overflow-x: hidden !important;
+}
+@media #{$md} {
+    overflow-x: hidden !important;
+}
+}
+.header-area.homepage1 {
+    position: absolute;
+    width: 100%;
+    z-index:9;
+    padding: 16px 0;
+    transition: all .4s;
+    .header-elements {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        transition: all .4s;
+        .site-logo{
+            img {
+                width: 147px;
+                height: 40px;
+                object-fit: contain;
+            }
+        }
+        .btn-area {
+            display: flex;
+            align-items: center;
+          .vl-btn1 {
+            margin: 0 24px;
+            @media #{$xs} {
+                display: none;
+            }
+          }  
+          button {
+            border: none;
+            outline: none;
+            background: none;
+          }
+        }
+    }
+}
+
+.header-area.homepage1.preview {
+    padding: 16px 0;
+    .btn-area {
+        .vl-btn1  {
+            display: inline-block;
+            margin: 0;
+        }
+    }
+}
+.header-area.homepage1.preview.sticky {
+    border-bottom: 1px solid var(--ztc-border-border-2);
+}
+/*============= HEADER CSS AREA ENDS ===============*/

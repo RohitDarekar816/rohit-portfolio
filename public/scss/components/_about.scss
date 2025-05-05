@@ -1,0 +1,244 @@
+@use '../utils' as *;
+
+/*============= ABOUT CSS AREA ===============*/
+.about-section-area {
+    .about-boxarea {
+        .about-main-boxes {
+            position: relative;
+            z-index: 1;
+            background: var(--ztc-bg-bg2);
+            border: 1px solid var(--ztc-border-border-2);
+            border-radius: 8px;
+            padding: 32px;
+            transition: all .4s;
+            margin-bottom: 30px;
+            &:hover {
+                border: 1px solid var(--ztc-bg-btn-bg1);
+                transition: all .4s;
+                transform: translateY(-5px);
+            }
+            h4 {
+                color: var(--ztc-text-text-1);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s32);
+                font-style: normal;
+                font-weight: var(--ztc-weight-semibold);
+                line-height: 32px; /* 100% */        
+            }
+            p {
+                color: var(--ztc-text-text-1);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s16);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 26px; /* 100% */   
+                opacity: 80%;     
+            }
+        }
+        .about-boxes2 {
+            position: relative;
+            z-index: 1;
+            background: var(--ztc-bg-bg2);
+            border: 1px solid var(--ztc-border-border-2);
+            border-radius: 8px;
+            padding: 30px;
+            transition: all .4s;
+            margin-bottom: 30px;
+            &:hover {
+                border: 1px solid var(--ztc-bg-btn-bg1);
+                transition: all .4s;
+                transform: translateY(-5px);
+            }
+            img {
+                position: absolute;
+                @media #{$xs} {
+                    position: relative;
+                }
+                @media #{$md} {
+                    position: relative;
+                }
+            }
+            .content-area {
+                padding-left: 58px;
+                @media #{$xs} {
+                    padding-left: 0;
+                    margin-top: 24px;
+                }
+                @media #{$md} {
+                    padding-left: 0;
+                    margin-top: 24px;
+                }
+                h4 {
+                    color: var(--ztc-text-text-1);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s20);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-semibold);
+                    line-height: 20px; /* 100% */ 
+                }
+                p {
+                    color: var(--ztc-text-text-1);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s16);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-medium);
+                    line-height: 26px; /* 100% */   
+                    opacity: 80%;
+                }
+            }
+        }
+        h3 {
+            color: var(--ztc-text-text-1);
+            font-family: var(--ztc-family-font1);
+            font-size: var(--ztc-font-size-font-s32);
+            font-style: normal;
+            font-weight: var(--ztc-weight-semibold);
+            line-height: 32px;    
+        }
+        .about-others-box {
+            position: relative;
+            z-index: 1;
+            background: var(--ztc-bg-bg2);
+            border: 1px solid var(--ztc-border-border-2);
+            border-radius: 8px;
+            padding: 32px;
+            transition: all .4s;
+            margin-bottom: 30px;
+            &:hover {
+                border: 1px solid var(--ztc-bg-btn-bg1);
+                transition: all .4s;
+                transform: translateY(-5px);
+            }
+            a {
+                color: var(--ztc-text-text-1);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s16);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 16px;
+                opacity: 80%;     
+                display: inline-block;
+            }
+            p {
+                color: var(--ztc-text-text-1);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s16);
+                font-style: normal;
+                font-weight: var(--ztc-weight-medium);
+                line-height: 16px;
+                opacity: 80%;     
+                display: inline-block;
+            }
+            h4 {
+                a {
+                    color: var(--ztc-text-text-1);
+                    font-family: var(--ztc-family-font1);
+                    font-size: var(--ztc-font-size-font-s24);
+                    font-style: normal;
+                    font-weight: var(--ztc-weight-semibold);
+                    line-height: 32px; 
+                    display: inline-block;
+                    transition: all .4s;
+                    opacity: 1;
+                    &:hover {
+                        color: var(--ztc-bg-btn-bg1);
+                        transition: all .4s;
+                    }
+                }    
+            }
+            h4 {
+                color: var(--ztc-text-text-1);
+                font-family: var(--ztc-family-font1);
+                font-size: var(--ztc-font-size-font-s24);
+                font-style: normal;
+                font-weight: var(--ztc-weight-semibold);
+                line-height: 32px; 
+                display: inline-block;
+                transition: all .4s;
+            }
+            ul {
+                text-align: center;
+                li {
+                    display: inline-block;
+                    a {
+                        height: 50px;
+                        width: 50px;
+                        text-align: center;
+                        line-height: 45px;
+                        border-radius: 50%;
+                        display: inline-block;
+                        transition: all .4s;
+                        border: 1px solid var(--ztc-border-border-3);
+                        margin: 0 12px 0 0;
+                        img {
+                            transition: all .4s;
+                            height: 24px;
+                            width: 24px;
+                            display: inline-block;
+                            object-fit: contain;
+                        }
+                        &:hover {
+                            background: var(--ztc-bg-btn-bg1);
+                            border: 1px solid var(--ztc-bg-btn-bg1);
+                            img {
+                                filter: brightness(0);
+                                transition: all .4s;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer-area {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .btn-area1 {
+        a {
+            img {
+                width: 147px;
+                height: 40px;
+                object-fit: contain;
+            }
+        }
+    }
+    p {
+        color: var(--ztc-text-text-1);
+        text-align: center;
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s16);
+        font-style: normal;
+        font-weight: var(--ztc-weight-medium);
+        line-height: 16px; 
+        opacity: 80%;   
+        @media #{$xs} {
+            margin-top: 30px;
+        } 
+    }
+    @media #{$xs} {
+        display: inline-block;
+    }
+}
+
+.footer-area2 {
+    p {
+        color: var(--ztc-text-text-1);
+        text-align: center;
+        font-family: var(--ztc-family-font1);
+        font-size: var(--ztc-font-size-font-s16);
+        font-style: normal;
+        font-weight: var(--ztc-weight-medium);
+        line-height: 16px; 
+        opacity: 80%;   
+        @media #{$xs} {
+            margin-top: 40px;
+        } 
+    }
+    @media #{$xs} {
+        display: block;
+        text-align: center;
+    }
+}
+/*============= ABOUT CSS AREA ENDS ===============*/
