@@ -1,40 +1,35 @@
-# Use official PHP with Apache
-FROM php:8.2-apache
+# Use an official PHP 8 image with common extensions
+FROM php:8.2-cli
 
-# Install system dependencies and PHP extensions
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
-    unzip \
     git \
-    curl \
+    unzip \
     zip \
+    curl \
     libicu-dev \
-    libonig-dev \
     libzip-dev \
-    && docker-php-ext-install intl pdo pdo_mysql zip
-
-# Enable Apache mod_rewrite
-RUN a2enmod rewrite
+    libonig-dev \
+    libpq-dev \
+    && docker-php-ext-install intl pdo pdo_mysql zip opcache
 
 # Install Composer globally
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
 
-# Install Symfony CLI
-RUN curl -sS https://get.symfony.com/cli/installer | bash \
-    && mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
-
 # Set working directory
-WORKDIR /var/www/html
+WORKDIR /var/www/project
 
-# Copy project files
+# Copy project files to the container
 COPY . .
 
-# Set correct permissions (adjust as needed)
-RUN chown -R www-data:www-data /var/www/html
+# Install PHP dependencies using Composer
+RUN composer install
 
-RUN Composer i
+RUN curl -sS https://get.symfony.com/cli/installer | bash && \
+    mv /root/.symfony*/bin/symfony /usr/local/bin/symfony
 
-# Expose Apache port
+# Expose port used by Symfony server
 EXPOSE 8000
 
-# Start Apache in the foreground
-CMD ["symfony server:start"]
+# Start Symfony local server
+CMD ["symfony", "server:start", "--no-tls", "--allow-http"]

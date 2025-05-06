@@ -1,0 +1,16 @@
+kind: pipeline
+type: digitalocean
+name: default
+
+token:
+  from_secret: token
+
+server:
+  image: docker-18-04
+  size: s-1vcpu-1gb
+  region: nyc1
+
+steps:
+- name: greeting
+  commands:
+  - docker build -t rohitdarekar816/portfolio:${DRONE_COMMIT_SHA:0:10} .
